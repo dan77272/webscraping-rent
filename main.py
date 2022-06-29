@@ -16,7 +16,7 @@ soup = BeautifulSoup(zillow_website, "html.parser")
 
 s = Service('C:\Development\chromedriver.exe')
 driver = webdriver.Chrome(service=s)
-driver.get('https://docs.google.com/forms/d/e/1FAIpQLSdSKOB5AAT-YAlzQDs21Ucc0G-0FJr9EvXJT6yYNkgr3zB3yw/viewform')
+driver.get(GOOGLE_SHEET)
 driver.maximize_window()
 
 my_list = soup.findAll(name="a", class_="list-card-link")
